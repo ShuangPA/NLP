@@ -20,3 +20,6 @@ def saveDictToCSV(data, filename):
   for key in data:
     outputFile.write(str(key) + ': ' + str(data[key]) + '\n')
   outputFile.close()
+
+if __name__ == '__main__':
+  pass

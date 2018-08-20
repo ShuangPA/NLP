@@ -86,4 +86,4 @@ if __name__ == '__main__':
                                 'industry':allIndustry},
                         columns = ['symbol', 'name', 'SICcode',
                                    'sector', 'industry'])
-  output.to_csv(options.output, index = False, sep=',')
+  output.to_csv(options.output, index=False, sep=',')

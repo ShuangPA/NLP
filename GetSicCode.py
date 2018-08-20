@@ -8,7 +8,7 @@ import pandas as pd
 import requests
 import bs4
 
-def get_SIC(name):
+def getSic(name):
   url = 'https://stockreports.nasdaq.edgar-online.com/' + name + '.html'
   response = requests.get(url)
   soup = bs4.BeautifulSoup(response.content, 'lxml')
@@ -32,7 +32,7 @@ if __name__ == '__main__':
   sic = []
   for idx in range(len(allSymbol)):
     try:
-      code = get_SIC(allSymbol[idx])
+      code = getSic(allSymbol[idx])
       if code == '':
         code = 'None'
     except:
