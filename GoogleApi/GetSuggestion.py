@@ -18,7 +18,7 @@ def getSuggestions(input):
 if __name__ == '__main__':
   usage = "usage: %prog [options]"
   parser = optparse.OptionParser(usage=usage)
-  parser.add_option("--input", default="Apple",
+  parser.add_option("--input", default="dell",
                     help='input name')
   (options, args) = parser.parse_args()
 

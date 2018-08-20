@@ -51,6 +51,6 @@ if __name__ == '__main__':
   usage = "usage: %prog [options]"
   parser = optparse.OptionParser(usage=usage)
   parser.add_option("--input", default="Apple",
-                    help='output filename')
+                    help='company name')
   (options, args) = parser.parse_args()
   result = getWikiTable(options.input)

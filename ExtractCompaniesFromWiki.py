@@ -6,6 +6,7 @@ Extract list of companies in the Fortune Global 500 from Wikipedia.
 import optparse
 import requests
 import bs4
+from CommonFunc import *
 
 if __name__ == '__main__':
   usage = "usage: %prog [options]"
@@ -25,6 +26,4 @@ if __name__ == '__main__':
   for idx in range(len(current_companies)):
     current_companies[idx] = current_companies[idx].lower()
   text = str(current_companies)
-  outputFile = open(options.output,'w')
-  outputFile.write(text)
-  outputFile.close()
+  saveFile(text, options.output)
