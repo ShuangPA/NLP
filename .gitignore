@@ -2,4 +2,6 @@
 .idea
 Temporary
 __pycache__
+*.csv
+data
 
