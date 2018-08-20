@@ -12,11 +12,6 @@ import pandas as pd
 from CommonFunc import *
 from GoogleApi.GetSuggestion import *
 
-def nameReplace(input):
-  return input.replace(' corp. ', ' ').replace(' corp ', ' ')\
-    .replace(' co. ', ' ').replace(' co ', ' ').replace(', inc. ', ' ')\
-    .replace(', inc ', ' ').replace(' inc. ', ' ').replace(' inc ', ' ')
-
 if __name__ == '__main__':
   usage = "usage: %prog [options]"
   parser = optparse.OptionParser(usage=usage)
@@ -49,8 +44,8 @@ if __name__ == '__main__':
     results[company] = list(set(outputTemp))
     print(count)
     count += 1
-    tt = random.uniform(0, 1)
-    time.sleep(tt)
+    sleepTime = random.uniform(0, 1)
+    time.sleep(sleepTime)
     if count % 100 == 0:
       time.sleep(5)
   print('suggestions fetch over')
